@@ -1,0 +1,40 @@
+{
+  "name": "better-qr",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "echo 'Cleaning...' && bunx rimraf --glob '**/{node_modules,dist,.next,.turbo}'",
+    "build": "turbo build --ui=stream --force --filter=\"./packages/*\"",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint:root": "eslint --cache --no-error-on-unmatched-pattern *.js *.ts scripts/**/*.ts",
+    "lint:workspace": "turbo lint --ui=stream",
+    "lint": "concurrently \"bun run --bun lint:root\" \"bun run --bun lint:workspace\"",
+    "typecheck": "turbo typecheck --ui=stream",
+    "typecheck:watch": "turbo typecheck:watch",
+    "prematch:versions": "bun install",
+    "match:versions": "bun run scripts/match-versions.ts"
+  },
+  "devDependencies": {
+    "@better-qr/config": "workspace:*",
+    "@types/bun": "1.3.6",
+    "@types/node": "25.0.10",
+    "eslint": "9.39.2",
+    "prettier": "3.8.1",
+    "rimraf": "6.1.2",
+    "turbo": "2.7.5",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.3.6",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "better-qr": ".",
+    "zod": "4.3.5"
+  }
+}

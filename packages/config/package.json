@@ -1,0 +1,19 @@
+{
+  "name": "@better-qr/config",
+  "type": "module",
+  "files": [
+    "prettier.config.js",
+    "eslint.config.js",
+    "base.json"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/js": "9.39.2",
+    "@stylistic/eslint-plugin": "5.7.0",
+    "eslint": "9.39.2",
+    "eslint-plugin-import": "2.32.0",
+    "globals": "17.0.0",
+    "prettier": "3.8.1",
+    "typescript-eslint": "8.53.1"
+  }
+}
