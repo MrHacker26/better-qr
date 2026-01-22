@@ -1,0 +1,35 @@
+{
+  "name": "@better-qr/server",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --fix --cache .",
+    "format": "prettier --write --cache --ignore-path .gitignore --ignore-path ../../.gitignore .",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun run scripts/build.ts",
+    "start": "bun run dist/index.js",
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc --watch"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/app/index.ts"
+    }
+  },
+  "dependencies": {
+    "@hono/zod-validator": "0.7.6",
+    "dotenv": "17.2.3",
+    "hono": "4.11.5",
+    "nanoid": "5.1.6",
+    "pino": "10.2.1",
+    "pino-pretty": "13.1.3",
+    "thread-stream": "4.0.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@better-qr/config": "workspace:*",
+    "@types/bun": "latest",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1"
+  }
+}

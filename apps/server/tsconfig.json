@@ -1,0 +1,6 @@
+{
+  "extends": "@better-qr/config/base.json",
+  "compilerOptions": {
+    "lib": ["ESNext"]
+  }
+}
