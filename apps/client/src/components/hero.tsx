@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
 import { QrCode, Zap, Shield, Palette, TrendingUp } from 'lucide-react'
+import { motion } from 'motion/react'
 
 import FeatureCard from './feature-card'
 

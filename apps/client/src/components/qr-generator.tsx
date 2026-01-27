@@ -1,6 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useMutation } from '@tanstack/react-query'
-import { AnimatePresence, motion } from 'framer-motion'
 import {
   CheckCircle2,
   Download,
@@ -9,6 +8,7 @@ import {
   Share2,
   Sparkles,
 } from 'lucide-react'
+import { AnimatePresence, motion } from 'motion/react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'

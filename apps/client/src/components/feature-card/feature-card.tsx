@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 import type { WithBasicProps } from '@/lib/utils'
 import { cn } from '@/lib/utils'
