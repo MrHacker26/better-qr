@@ -27,4 +27,3 @@ export const app = new Hono()
   .route('/qr', qrRoutes)
 
 export type App = typeof app
-export default app
