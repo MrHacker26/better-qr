@@ -39,13 +39,14 @@ export function ThemeSwitcher() {
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={theme}
-          initial={{ y: -20, opacity: 0, rotate: -90 }}
-          animate={{ y: 0, opacity: 1, rotate: 0 }}
-          exit={{ y: 20, opacity: 0, rotate: 90 }}
+          initial={{ scale: 0.8, opacity: 0, rotate: -180 }}
+          animate={{ scale: 1, opacity: 1, rotate: 0 }}
+          exit={{ scale: 0.8, opacity: 0, rotate: 180 }}
           transition={{
-            duration: 0.2,
-            ease: 'easeInOut',
+            duration: 0.15,
+            ease: [0.4, 0, 0.2, 1],
           }}
+          className="flex items-center justify-center"
         >
           {getIcon()}
         </motion.div>

@@ -19,11 +19,12 @@ export default function FeatureCard({
   return (
     <motion.div
       whileHover={{ scale: 1.05, y: -5 }}
+      transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
       className={cn(
         'bg-card/80 backdrop-blur-sm rounded-2xl p-6 border shadow-lg',
         className,
       )}
-      style={style}
+      style={{ ...style, willChange: 'transform' }}
     >
       <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-linear-to-br from-gradient-start to-gradient-mid text-white mb-3">
         {icon}
