@@ -2,10 +2,14 @@ import { QrCode, Zap, Shield, Palette, TrendingUp } from 'lucide-react'
 import { motion } from 'motion/react'
 
 import FeatureCard from './feature-card'
+import { ThemeSwitcher } from './ui/theme-switcher'
 
 export function Hero() {
   return (
     <div className="relative overflow-hidden">
+      <div className="absolute top-4 right-4 z-10">
+        <ThemeSwitcher />
+      </div>
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-linear-to-br from-gradient-start/5 via-gradient-mid/5 to-gradient-end/5" />
         <motion.div
