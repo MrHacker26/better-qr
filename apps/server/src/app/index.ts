@@ -24,6 +24,12 @@ export const app = new Hono()
       credentials: true,
     }),
   )
+  .get('/health', (c) => {
+    return c.json({
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+    })
+  })
   .route('/qr', qrRoutes)
 
 export type App = typeof app
